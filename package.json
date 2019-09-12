@@ -12,5 +12,9 @@
   },
   "devDependencies": {
     "semantic-release": "^15.13.24"
+  },
+  "dependencies": {
+    "cssnano-preset-simple": "^1.0.0",
+    "postcss": "^7.0.18"
   }
 }
