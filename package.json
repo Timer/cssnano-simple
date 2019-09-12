@@ -7,6 +7,9 @@
   "author": "Joe Haddad <timer150@gmail.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "src/"
+  ],
   "scripts": {
     "semantic-release": "semantic-release"
   },
