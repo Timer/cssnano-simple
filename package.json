@@ -11,13 +11,20 @@
     "src/"
   ],
   "scripts": {
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "3.0.2",
     "semantic-release": "^15.13.24"
   },
   "dependencies": {
     "cssnano-preset-simple": "^1.0.0",
     "postcss": "^7.0.18"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
