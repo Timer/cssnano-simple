@@ -19,7 +19,7 @@
     "semantic-release": "^15.13.24"
   },
   "dependencies": {
-    "cssnano-preset-simple": "^1.0.0",
+    "cssnano-preset-simple": "^1.0.1",
     "postcss": "^7.0.18"
   },
   "config": {
