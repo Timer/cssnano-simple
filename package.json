@@ -22,7 +22,7 @@
     "semantic-release": "^17.1.1"
   },
   "dependencies": {
-    "cssnano-preset-simple": "1.1.5",
+    "cssnano-preset-simple": "1.1.7",
     "postcss": "^7.0.32"
   },
   "config": {
