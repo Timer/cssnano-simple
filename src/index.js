@@ -31,10 +31,25 @@ function initializePlugin(excludeAll, plugin, css, result) {
 module.exports = postcss.plugin('cssnano-simple', (opts = {}) => {
   const excludeAll = Boolean(opts && opts.excludeAll);
 
+  const userOpts = Object.assign({}, opts);
+  if (excludeAll) {
+    for (const userOption in userOpts) {
+      if (!userOpts.hasOwnProperty(userOption)) continue;
+      const val = userOpts[userOption];
+      if (!Boolean(val)) {
+        continue;
+      }
+
+      if (Object.prototype.toString.call(val) === '[object Object]') {
+        userOpts[userOption] = Object.assign({}, { exclude: false }, val);
+      }
+    }
+  }
+
   const options = Object.assign(
     {},
     excludeAll ? { rawCache: true } : undefined,
-    opts
+    userOpts
   );
 
   const preset = createSimplePreset(options);

@@ -42,4 +42,29 @@ describe('exclude all test', () => {
 
     expect(res.css).toMatchInlineSnapshot(`"p{color:yellow}.empty{}"`);
   });
+
+  test('should enable rule with empty object', async () => {
+    const input = css`
+      p {
+        /* test */
+        color: yellow;
+      }
+      .empty {
+      }
+    `;
+
+    const res = await postcss([
+      mod({
+        excludeAll: true,
+        discardComments: true,
+        normalizeWhitespace: { exclude: false },
+        discardEmpty: {},
+      }),
+    ]).process(input, {
+      from: 'input.css',
+      to: 'output.css',
+    });
+
+    expect(res.css).toMatchInlineSnapshot(`"p{color:yellow}"`);
+  });
 });
