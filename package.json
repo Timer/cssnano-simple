@@ -25,7 +25,7 @@
     "semantic-release": "^17.2.2"
   },
   "dependencies": {
-    "cssnano-preset-simple": "1.2.1",
+    "cssnano-preset-simple": "1.2.2",
     "postcss": "^7.0.32"
   },
   "config": {
