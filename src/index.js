@@ -1,7 +1,6 @@
-const postcss = require('postcss');
 const createSimplePreset = require('cssnano-preset-simple');
 
-module.exports = (opts = {}) => {
+module.exports = (opts = {}, postcss = require('postcss')) => {
   const excludeAll = Boolean(opts && opts.excludeAll);
 
   const userOpts = Object.assign({}, opts);
