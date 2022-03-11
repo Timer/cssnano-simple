@@ -27,7 +27,8 @@ module.exports = (opts = {}, postcss = require('postcss')) => {
   const plugins = [];
   createSimplePreset(options).plugins.forEach((plugin) => {
     if (Array.isArray(plugin)) {
-      const [processor, opts] = plugin;
+      let [processor, opts] = plugin;
+      processor = processor.default || processor;
 
       const isEnabled =
         // No options:
