@@ -27,7 +27,7 @@
     "semantic-release": "^17.3.7"
   },
   "dependencies": {
-    "cssnano-preset-simple": "^3.0.1"
+    "cssnano-preset-simple": "^4.0.0"
   },
   "peerDependencies": {
     "postcss": "^8.2.15"
