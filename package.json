@@ -24,7 +24,7 @@
     "postcss": "^8.2.15",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "semantic-release": "^17.3.7"
+    "semantic-release": "^19.0.3"
   },
   "dependencies": {
     "cssnano-preset-simple": "^4.0.0"
